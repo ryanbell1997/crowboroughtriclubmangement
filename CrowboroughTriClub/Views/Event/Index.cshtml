@@ -1,0 +1,47 @@
+﻿@model WildApricotEvent;
+
+<div>
+    <form asp-controller="Event" asp-action="Create" method="post">
+        <input hidden=true asp-for="Id" />
+        <label asp-for="Name">Event Name</label>
+        <input asp-for="Name" label/>
+
+        <label asp-for="EventType">Event Type</label>
+        <input asp-for="EventType" />
+
+        <label asp-for="StartDate">Start Date</label>
+        <input asp-for="StartDate" type="date" />
+
+        <label asp-for="EndDate">End Date</label>
+        <input asp-for="EndDate" type="date" />
+
+        <label asp-for="Location">Location</label>
+        <input asp-for="Location" type="textarea" />
+
+        <label asp-for="RegistrationEnabled">Registration Enabled?</label>
+        <input asp-for="RegistrationEnabled" type="checkbox" />
+        
+        <label asp-for="Details.DescriptionHtml">Description</label>
+        <input asp-for="Details.DescriptionHtml" type="textarea" />
+
+        <label asp-for="Details.GuestRegistrationSettings.Enabled">Guest Enabled?</label>
+        <input asp-for="Details.GuestRegistrationSettings.Enabled" />
+
+        <label asp-for="Details.PaymentInstructions">Payment Instructions</label>
+        <input asp-for="Details.PaymentInstructions" />
+
+        <label asp-for="Details.PaymentMethod">Payment Method</label>
+        <input asp-for="Details.PaymentMethod" />
+
+        <label asp-for="Details.SendEmailCopy">Send Confirmation Email</label>
+        <input asp-for="Details.SendEmailCopy"/>
+
+        <label asp-for="Details.IsWaitlistEnabled">Enable Wait List</label>
+        <input asp-for="Details.IsWaitlistEnabled" />
+
+        <label asp-for="Details.MultipleRegistrationAllowed">Multi Registration?(Default no)</label>
+        <input asp-for="Details.MultipleRegistrationAllowed" asp-default/>
+    </form>
+</div>
+
+
